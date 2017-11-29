@@ -16,13 +16,7 @@ namespace GenericMvvmLight
         public static void Main()
         {
             App application = new App() { ShutdownMode = ShutdownMode.OnMainWindowClose};
-            //App application = new App { ShutdownMode = ShutdownMode.OnExplicitShutdown};
-            //application.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            //Property Value -> Type: System.Windows.ShutdownMode
-            //A ShutdownMode enumeration value.The default value is OnLastWindowClose.
-            //Altrimenti di default chiude l'Application alla chiusura della
-            //ultima finestra che in questo caso è lo SplashScreen!!
-            
+
             application.InitializeComponent();
             MainWindow window = new MainWindow();
 
@@ -31,7 +25,6 @@ namespace GenericMvvmLight
 
             if (result ?? false)
             {
-                //application.Run(new MainWindow());
                 application.Run(window);
             }
             else
